@@ -1,0 +1,43 @@
+$marioSize: 10rem;
+
+.intro {
+  color: white;
+  padding-top: 2rem;
+  background: url("https://mbtskoudsalg.com/images/mario-icon-png-3.png") no-repeat ;
+  background-size: $marioSize * 1.1;
+  background-color: #00bd64;
+  background-position: (right -1rem) (bottom -1.3rem);
+  &__main {
+    display: grid;
+    grid-gap: 1rem;
+
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 900;
+      padding-bottom: 1rem;
+    }
+
+    p {
+      display: grid;
+      grid-template-columns: 1fr ($marioSize * 0.95) ;
+      font-size: 0.8rem;
+      color: #3a0256;
+      font-weight: lighter;
+    }
+
+    &__video {
+      display: grid;
+      grid-template-columns: 3rem 1fr;
+      font-weight: 400;
+      color: white;
+      text-decoration: none;
+      align-items: center;
+      font-size: 1.4rem;
+      text-shadow: 0 0 0.3rem black;
+    }
+
+  }
+
+
+
+}

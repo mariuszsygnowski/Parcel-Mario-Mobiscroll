@@ -1,0 +1,131 @@
+@import "reset";
+@import "container.scss";
+@import "header.scss";
+@import "inputs";
+@import "intro";
+@import "results";
+@import "singleResultBox";
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+
+.app {
+  font-family: "Varela Round", sans-serif;
+  margin: 0 auto;
+  width: 100vw;
+  background-color: white;
+  min-width: 216px;
+}
+
+@media (min-width: 300px) {
+  html {
+    font-size: 15.5px;
+  }
+}
+@media (min-width: 400px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 768px) {
+  .singleResultBox {
+    display: grid;
+    font-size: 18px;
+    background-color: #f7f7f7;
+    padding: 0.7rem;
+    grid-gap: 0.5rem;
+    //align-items: self-end;
+    grid-template-columns: 11rem 1fr 6rem 10rem;
+    grid-template-areas:
+      "photo  carrier   priceNet   bookNow"
+      "photo  carrier   priceNet   bookNow"
+      "photo  serviceDescription priceGross bookNow"
+      "photo  serviceName priceGross bookNow";
+
+    &__image {
+      grid-area: photo;
+      // width: 100%;
+      // height: auto;
+    }
+
+    &__carrier {
+      align-self: center;
+    }
+    &__priceGross {
+      align-self: center;
+    }
+
+    &__priceNet {
+      align-self: center;
+    }
+  }
+
+  .app {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "navigation navigation" "intro form" "results results";
+    .navigation {
+      grid-area: navigation;
+    }
+    .intro {
+      grid-area: intro;
+    }
+    .form {
+      grid-area: form;
+    }
+    .results {
+      grid-area: results;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .navigation__main__list {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    grid-template-rows: 2rem;
+
+    li {
+      display: grid;
+      grid-template-rows: 2rem;
+    }
+
+    li a {
+      font-family: "Varela Round", sans-serif;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 100;
+      width: auto;
+      white-space: nowrap;
+      text-decoration: none;
+      font-variant: full-width;
+      margin: auto 0.5rem;
+      align-self: center;
+    }
+
+    li:hover {
+      background-color: rgba(201, 76, 76, 0.3);
+    }
+
+    .sendAParcel {
+      color: yellow;
+    }
+  }
+  .navigation__main__toggle {
+    display: none;
+  }
+
+  .app {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+@media (min-width: 1224px) {
+  .app {
+    display: grid;
+    grid-template-columns: 20rem 1fr;
+    grid-template-areas:
+      "navigation navigation"
+      "intro intro"
+      "form results";
+  }
+}

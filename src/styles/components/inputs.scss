@@ -1,0 +1,221 @@
+$gridGap: 0.25rem;
+$smallerFonts: 0.75rem;
+$borderRadius: 0.3rem;
+$paddingInsideForm: 3rem;
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+
+.padding {
+  margin-bottom: 50rem;
+}
+
+.invalidInput {
+  background-color: red;
+}
+
+.form {
+  background-color: #fff;
+  padding: 0.5rem;
+
+  .displayBlock {
+    display: block;
+  }
+
+  .displayNone {
+    display: none;
+  }
+
+  &__main {
+    border-radius: $borderRadius;
+    padding: 0;
+    background-color: #3a0256;
+    color: white;
+    font-weight: 900;
+    font-size: 1.2rem;
+    display: grid;
+    padding-bottom: 1rem;
+
+    p {
+      padding-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: 900;
+    }
+
+    &__selections {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      a {
+        display: grid;
+        align-items: center;
+        font-size: $smallerFonts;
+        padding: 1rem 0 1rem 0;
+        font-weight: 900;
+        color: white;
+        text-decoration: none;
+      }
+
+      &__parcelMonkeyLocal {
+        display: grid;
+        grid-template-columns: repeat(3, min-content);
+        background-color: #863888;
+        border-top-right-radius: $borderRadius;
+
+        p {
+          padding: 0;
+        }
+
+        p:nth-child(1) {
+          display: grid;
+          align-items: flex-end;
+          padding-left: 0.3rem;
+          color: #e9ff0d;
+          align-self: self-end;
+          font-size: 0.5rem;
+          font-weight: 900;
+        }
+
+        p:nth-child(2) {
+          align-self: self-end;
+          font-size: 0.8rem;
+        }
+
+        p:nth-child(3) {
+          color: #00bd64;
+          align-self: self-end;
+          font-size: 0.8rem;
+          font-style: italic;
+        }
+      }
+    }
+
+    &__dimensionAndWeight label {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr min-content;
+      grid-gap: $gridGap;
+      font-size: $smallerFonts;
+      font-weight: 900;
+
+      input {
+        height: 2rem;
+        border-radius: $borderRadius;
+        padding-left: 0.5rem;
+      }
+    }
+
+    &__fromAndToCountry {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr min-content;
+      grid-gap: $gridGap;
+
+      &__countryFrom,
+      &__countryTo {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content;
+        grid-gap: 1rem;
+
+        label {
+          font-size: $smallerFonts;
+          font-weight: 900;
+          input {
+            height: 2rem;
+            border-radius: $borderRadius;
+            padding-left: 0.5rem;
+          }
+        }
+
+        div:first-child {
+          display: grid;
+          align-items: center;
+          grid-template-rows: min-content min-content;
+          grid-template-columns: 1fr;
+          grid-gap: $gridGap;
+
+          select {
+            width: 100%;
+            font-size: 0.9rem;
+            font-weight: 100;
+            color: black;
+            height: 2rem;
+            background-color: #fff;
+            padding-left: 0.4rem;
+            border-radius: $borderRadius;
+
+            ///* Removes the default <select> styling */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            /* Positions background arrow image */
+            background-image: url("https://www.freeiconspng.com/uploads/arrow-down-icon-png-24.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: right;
+          }
+        }
+
+        div:last-child input {
+          width: 100%;
+        }
+      }
+
+      &__countryFrom {
+        padding-top: 1rem;
+      }
+    }
+
+    &__dimensionAndWeight {
+      display: grid;
+      grid-gap: $gridGap;
+      padding-top: 1rem;
+
+      .inputsDimensionAndWeight label {
+        display: grid;
+        grid-template-columns: min-content min-content;
+        align-items: center;
+      }
+    }
+
+    &__button {
+      font-family: "Varela Round", sans-serif;
+      font-weight: 900;
+      font-size: 1.4rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      background: #e9ff0d;
+      background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        from(#e9ff0d),
+        color-stop(50%, #c5d900),
+        to(#e9ff0d)
+      );
+      background-image: -webkit-linear-gradient(
+        top,
+        #e9ff0d 0,
+        #c5d900 50%,
+        #e9ff0d 100%
+      );
+      background-image: linear-gradient(
+        to bottom,
+        #e9ff0d 0,
+        #c5d900 50%,
+        #e9ff0d 100%
+      );
+      border-radius: $borderRadius;
+    }
+
+    &__longerThan1Meter {
+      font-size: 0.8rem;
+      width: auto;
+    }
+
+    &__longerThan1Meter span:first-child:hover {
+      color: #c3bdc6;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.results {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-auto-rows: min-content;
+  grid-template-columns: 100%;
+}
+.margin-bottom {
+  margin-bottom: 20rem;
+}

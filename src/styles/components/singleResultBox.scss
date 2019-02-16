@@ -1,0 +1,87 @@
+.singleResultBox {
+  display: grid;
+  background-color: #f7f7f7;
+  padding: 0.7rem;
+  grid-gap: 0.5rem;
+  grid-template-columns: 60% 40%;
+  // grid-auto-rows: 1rf;
+
+  //grid-auto-rows: minmax(3rem, 6rem) minmax(3rem, 6rem) minmax(3rem, 6rem) minmax(3rem, 6rem) minmax(3rem, 6rem);
+
+  grid-template-areas:
+    "photo bookNow"
+    "carrier priceNet"
+    "serviceDescription priceGross"
+    ". ."
+    "serviceName .";
+
+  &__carrier {
+    grid-area: carrier;
+    font-size: 1.3rem;
+    font-weight: 900;
+  }
+
+  &__serviceName {
+    grid-area: serviceName;
+    display: grid;
+    align-items: self-end;
+    font-size: 0.6rem;
+  }
+
+  &__serviceDescription {
+    grid-area: serviceDescription;
+    font-size: 0.7rem;
+    font-weight: 900;
+    padding-bottom: -0.3rem;
+  }
+
+  &__service {
+    display: none;
+    grid-area: service;
+    font-size: 0.7rem;
+    font-weight: 900;
+  }
+
+  &__priceNet {
+    grid-area: priceNet;
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  &__priceGross {
+    grid-area: priceGross;
+    font-size: 0.7rem;
+    font-weight: 900;
+  }
+
+  &__bookNow {
+    grid-area: bookNow;
+    background-color: #863888;
+    color: white;
+    height: 2rem;
+    font-size: 0.9rem;
+    font-weight: 900;
+    display: grid;
+    justify-content: center;
+    align-self: center;
+    border-radius: 0.3rem;
+    text-decoration: none;
+
+    &__button {
+      font-family: "Varela Round", sans-serif;
+      font-weight: 900;
+      background-color: #863888;
+      border: #863888;
+      color: white;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__image {
+    display: grid;
+    align-self: center;
+    grid-area: photo;
+    height: 5rem;
+    width: auto;
+  }
+}
