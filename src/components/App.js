@@ -6,7 +6,7 @@ import Results from "./Results";
 import "../styles/components/app.scss";
 
 import mobiscroll from "@mobiscroll/react-lite";
-import "@mobiscroll/react-lite/dist/css/mobiscroll.min.css";
+import "@mobiscroll/react-lite/dist/css/mobiscroll.css";
 
 // import Footer from './Footer';
 
