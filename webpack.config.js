@@ -15,7 +15,12 @@ module.exports = {
         loader: require.resolve("babel-loader")
       },
       {
-        test: /\.scss$/,
+        test: /\.jsx$/,
+        exclude: /(node_modules)/,
+        loader: require.resolve("babel-loader")
+      },
+      {
+        test: /\.(sa|sc|c)ss$/,
         use: [
           {
             loader: "style-loader"
@@ -27,6 +32,10 @@ module.exports = {
             loader: "sass-loader"
           }
         ]
+      },
+      {
+        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        use: ["url-loader?limit=100000"]
       }
     ]
   }
