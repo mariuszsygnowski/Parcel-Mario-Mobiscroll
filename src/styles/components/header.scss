@@ -1,13 +1,14 @@
 @import "../base/colours";
 
 .navigation {
-  background-color: #3a0256;
+  background-color: #f7f7f7;
   padding: 0.9rem 0;
 
   &__main {
     display: grid;
-    grid-template-columns: 1fr min-content;
-    color: white;
+    grid-template-columns: 136px minmax(124px, 1fr);
+    color: #3a0256;
+    // width: 100vw;
 
     h3 {
       display: grid;
