@@ -6,9 +6,9 @@
 
   &__main {
     display: grid;
-    grid-template-columns: 136px minmax(1px, 1fr);
+    grid-template-columns: 7.4rem minmax(1px, 1fr);
     color: #3a0256;
-    // width: 100vw;
+    grid-gap: 1rem;
 
     h3 {
       display: grid;

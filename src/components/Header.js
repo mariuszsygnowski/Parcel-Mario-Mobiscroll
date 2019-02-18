@@ -26,11 +26,11 @@ class Header extends React.Component {
 
     return (
       <mobiscroll.Form className="navigation ">
-        <mobiscroll.FormGroup className="navigation__main container">
+        <div className="navigation__main container">
           <h3>
             parcel <span /> mario
           </h3>
-          <mobiscroll.BottomNav type="hamburger" display="inline">
+          <mobiscroll.BottomNav type="inline" display="inline">
             {/* <mobiscroll.Button>Button</mobiscroll.Button> */}
             <mobiscroll.NavItem icon="newspaper" color="success">
               Send a Parcel
@@ -103,7 +103,7 @@ class Header extends React.Component {
               </a>
             </li>
           </ul> */}
-        </mobiscroll.FormGroup>
+        </div>
       </mobiscroll.Form>
     );
   }
