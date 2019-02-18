@@ -25,18 +25,14 @@ class Header extends React.Component {
     });
 
     return (
-      <nav className="navigation ">
-        <div className="navigation__main container">
+      <mobiscroll.Form className="navigation ">
+        <mobiscroll.FormGroup className="navigation__main container">
           <h3>
             parcel <span /> mario
           </h3>
-          <mobiscroll.BottomNav
-            lang="en-UK"
-            theme="auto"
-            type="hamburger"
-            display="inline"
-          >
-            <mobiscroll.NavItem icon="newspaper">
+          <mobiscroll.BottomNav type="hamburger" display="inline">
+            {/* <mobiscroll.Button>Button</mobiscroll.Button> */}
+            <mobiscroll.NavItem icon="newspaper" color="success">
               Send a Parcel
             </mobiscroll.NavItem>
             <mobiscroll.NavItem icon="material-people">
@@ -107,8 +103,8 @@ class Header extends React.Component {
               </a>
             </li>
           </ul> */}
-        </div>
-      </nav>
+        </mobiscroll.FormGroup>
+      </mobiscroll.Form>
     );
   }
 }

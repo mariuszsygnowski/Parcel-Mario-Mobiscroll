@@ -152,9 +152,17 @@ class Form extends React.Component {
 
   handleClick(event) {
     event.preventDefault();
-    this.setState({
-      displayOffOn: "displayBlock"
-    });
+    if (event.target.innerHTML === "Parcel larger than 1 m?") {
+      event.target.innerHTML = "close advanced search";
+      this.setState({
+        displayOffOn: "displayBlock"
+      });
+    } else {
+      event.target.innerHTML = "Parcel larger than 1 m?";
+      this.setState({
+        displayOffOn: "displayNone"
+      });
+    }
   }
 
   render() {
