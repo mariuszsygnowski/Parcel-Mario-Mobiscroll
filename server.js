@@ -22,7 +22,8 @@ const db = pgp({
 
 app.use(bodyParser.json());
 app.use("/static", express.static("static"));
-app.set("view engine", "hbs");
+app.set("view engine", "html");
+app.engine("html", require("hbs").__express);
 
 const port = process.env.PORT || 8080;
 

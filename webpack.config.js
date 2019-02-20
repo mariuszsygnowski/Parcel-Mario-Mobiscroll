@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -38,5 +39,10 @@ module.exports = {
         use: ["url-loader?limit=100000"]
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: path.resolve(__dirname, "views/index.html")
+    })
+  ]
 };

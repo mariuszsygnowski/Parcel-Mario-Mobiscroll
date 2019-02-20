@@ -28,7 +28,7 @@ class Header extends React.Component {
       <mobiscroll.Form className="navigation ">
         <div className="navigation__main container">
           <h3>
-            parcel <span /> mario
+            Aparcel <span /> mario
           </h3>
           <mobiscroll.BottomNav type="inline" display="inline">
             {/* <mobiscroll.Button>Button</mobiscroll.Button> */}
