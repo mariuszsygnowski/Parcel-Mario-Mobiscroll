@@ -4,7 +4,7 @@ import "../styles/components/container.scss";
 import "../styles/components/header.scss";
 
 import mobiscroll from "@mobiscroll/react";
-import "@mobiscroll/react/dist/css/mobiscroll.min.css";
+import "@mobiscroll/react/dist/css/mobiscroll.react.min.css";
 
 class Header extends React.Component {
   constructor() {
@@ -33,7 +33,9 @@ class Header extends React.Component {
           <mobiscroll.BottomNav type="inline" display="inline">
             {/* <mobiscroll.Button>Button</mobiscroll.Button> */}
             <mobiscroll.NavItem icon="newspaper" color="success">
-              Send a Parcel
+              <a className="sendAParcel" href="#1">
+                Send a Parcel
+              </a>
             </mobiscroll.NavItem>
             <mobiscroll.NavItem icon="material-people">
               Tracking

@@ -10,6 +10,9 @@
     color: #3a0256;
     grid-gap: 1rem;
 
+    a {
+      text-decoration: none;
+    }
     h3 {
       display: grid;
       grid-template-columns: repeat(3, min-content);
