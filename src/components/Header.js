@@ -28,14 +28,11 @@ class Header extends React.Component {
       <mobiscroll.Form className="navigation ">
         <div className="navigation__main container">
           <h3>
-            Aparcel <span /> mario
+            parcel <span /> marioa
           </h3>
           <mobiscroll.BottomNav type="inline" display="inline">
-            {/* <mobiscroll.Button>Button</mobiscroll.Button> */}
             <mobiscroll.NavItem icon="newspaper" color="success">
-              <a className="sendAParcel" href="#1">
-                Send a Parcel
-              </a>
+              Send a Parcel
             </mobiscroll.NavItem>
             <mobiscroll.NavItem icon="material-people">
               Tracking
@@ -63,7 +60,7 @@ class Header extends React.Component {
             </mobiscroll.HamburgerNav>
           </div> */}
 
-          {/* <ul className={navListClasses}>
+          <ul className={navListClasses}>
             <li>
               <a className="sendAParcel" href="#1">
                 Send a Parcel
@@ -104,7 +101,7 @@ class Header extends React.Component {
                 Log in
               </a>
             </li>
-          </ul> */}
+          </ul>
         </div>
       </mobiscroll.Form>
     );

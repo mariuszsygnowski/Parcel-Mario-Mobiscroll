@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+require("dotenv").config();
 
 module.exports = {
   entry: "./src/index.js",
@@ -7,6 +8,14 @@ module.exports = {
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "static")
+  },
+  devServer: {
+    proxy: {
+      "/parcelmonkey/*": {
+        target: `http://localhost:${process.env.PORT}/`,
+        secure: "false"
+      }
+    }
   },
   module: {
     rules: [
@@ -35,14 +44,14 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+        test: /\.(woff|woff2|eot|ttf|png|svg|jpg|gif)$/,
         use: ["url-loader?limit=100000"]
       }
     ]
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: path.resolve(__dirname, "views/index.html")
+      template: path.resolve(__dirname, "static/index.html")
     })
   ]
 };

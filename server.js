@@ -2,9 +2,6 @@
 
 require("dotenv").config();
 
-const rootCas = require("ssl-root-cas/latest").create();
-require("https").globalAgent.options.ca = rootCas;
-
 const fetch = require("node-fetch");
 const superagent = require("superagent");
 const cheerio = require("cheerio");

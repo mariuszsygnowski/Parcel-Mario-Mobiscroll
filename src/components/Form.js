@@ -101,7 +101,7 @@ class Form extends React.Component {
   }
 
   runFetch() {
-    fetch("parcelmonkey", {
+    fetch("/parcelmonkey", {
       method: "POST",
       headers: {
         "Content-Type": "application/json; charset=utf-8"
