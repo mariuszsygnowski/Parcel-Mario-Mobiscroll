@@ -50,7 +50,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: path.resolve(__dirname, "static/index.html")
+      template: path.resolve(__dirname, "views/index.html")
     })
   ]
 };
