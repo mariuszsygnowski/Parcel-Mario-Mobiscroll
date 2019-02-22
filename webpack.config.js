@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+require("dotenv").config();
 
 module.exports = {
   entry: "./src/index.js",
@@ -10,8 +11,8 @@ module.exports = {
   },
   devServer: {
     proxy: {
-      "/parcelmonkey/*": {
-        target: "http://localhost:8080/",
+      "/*/*": {
+        target: `http://localhost:${process.env.PORT}/`,
         secure: "false"
       }
     }

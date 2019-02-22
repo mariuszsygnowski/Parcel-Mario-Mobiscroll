@@ -60,7 +60,7 @@ class Header extends React.Component {
             </mobiscroll.HamburgerNav>
           </div> */}
 
-          <ul className={navListClasses}>
+          {/* <ul className={navListClasses}>
             <li>
               <a className="sendAParcel" href="#1">
                 Send a Parcel
@@ -101,7 +101,7 @@ class Header extends React.Component {
                 Log in
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
       </mobiscroll.Form>
     );
